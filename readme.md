@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is designed as a showcase of advanced data engineering practices, utilizing the Instacart dataset to demonstrate a sophisticated pipeline architecture. 
+This project is designed as a showcase of modern data engineering practices, utilizing the Instacart dataset to demonstrate a complex pipeline architecture. 
 
 From the initial data ingestion phase to the final analysis, every step is engineered to ensure efficiency, scalability, and reliability. The pipeline employs modern data processing frameworks and techniques to clean, transform, and enrich the raw data, preparing it for insightful analysis. 
 
