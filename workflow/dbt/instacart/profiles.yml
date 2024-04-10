@@ -1,0 +1,11 @@
+---
+instacart:
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: "{{ env_var('GCP_PROJECT_ID', 'shdezc') }}"
+      dataset: "{{ env_var('BIGQUERY_DATASET', 'shdezc_instacart_dataset') }}"
+      threads: 4 # Must be a value of 1 or greater
+      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS', '/.google/credentials/shdezc-credentials.json') }}"
+  target: dev

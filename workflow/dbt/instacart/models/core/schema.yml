@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: core
+    database:
+      "{{ env_var('GCP_PROJECT_ID', 'shdezc') }}"
+    schema:
+      "{{ env_var('BIGQUERY_DATASET', 'shdezc_instacart_dataset') }}"
+
+    tables:
+      - name: dim_aisle
+      - name: dim_department
+      - name: dim_product
+      - name: fact_order
+      - name: fact_order_product
+
+      
+    
