@@ -2,9 +2,9 @@
 
 ## Overview
 
-This project is designed as a showcase of modern data engineering practices, utilizing the Instacart dataset to demonstrate a complex pipeline architecture. 
+This project is designed as a showcase of modern data engineering practices, utilizing the Instacart dataset to demonstrate an end-to-end data pipeline. 
 
-From the initial data ingestion phase to the final analysis, every step is engineered to ensure efficiency, scalability, and reliability. The pipeline employs modern data processing frameworks and techniques to clean, transform, and enrich the raw data, preparing it for insightful analysis. 
+From the initial data ingestion phase to the final analysis, every step is designed to ensure efficiency, scalability, and reliability. The pipeline employs modern data processing frameworks and techniques to clean, transform, and enrich the raw data, preparing it for insightful analysis. 
 
 The end product is a versatile analytics dashboard that draws on this processed data, offering users the ability to uncover users' behavior as well as shopping trends and patterns with ease. This project not only aims to provide valuable insights from the Instacart dataset but also to serve as a blueprint for building robust data engineering pipelines.
 
@@ -17,7 +17,7 @@ The end product is a versatile analytics dashboard that draws on this processed 
 
 - **Google Cloud Platform (GCP)**: The foundational cloud infrastructure that ensures scalability and robust performance for hosting our Data Lake and Data Warehouse
 - **Terraform**: Tool for Infrastructure as Code (IaC) which automates the provisioning and management of our cloud resources, establishing a consistent and scalable environment through code
-- **Docker and Docker Compose**: Tools that containerizes components for consistent deployment across environments and simplifies multi-container application management
+- **Docker and Docker Compose**: Tools that containerize components for consistent deployment across environments and simplify multi-container application management
 - **Apache Airflow**: Automated workflow managment tool that orchestrates data ingestion, processing, and transformation tasks
 - **Apache Parquet**: Before being ingested to data lake, raw data is transformed into Apache Parquet to compress storage and accelerate query performance with its columnar format.
 - **Google Cloud Storage**: Acts as the primary data lake, a scalable repository for storing vast amounts of raw and processed data
@@ -75,12 +75,12 @@ Our data warehousing solution is built on Google BigQuery, serving as the infras
 
 The use of partitioning and clustering strategies is key to managing and querying our data efficiently. Below are details on how these techniques are applied to our main tables:
 
-- fact_order: stores details of each order, including order_id, user_id, eval_set, order_number, order_dow (day of the week), order_hour_of_day, and days_since_prior_order.
-  - Partitioned by user_id: This allows for efficient query performance when filtering data for specific users, making user-centric analyses faster and more manageable.
-  - Clustered by order_id: Orders are sorted by order_id to facilitate chronological analysis of a user's orders, identifying the first and last orders easily.
-- fact_order_product: stores information linking orders to products, with fields such as order_id, product_id, add_to_cart_order, and reordered.
-  - Partitioned by order_id: Enables efficient filtering of data based on specific orders, essential for analyzing order-level product selections.
-  - Clustered by add_to_cart_order: Sorts products within an order by their addition sequence to the cart, allowing for a sequential view of how products were chosen.
+- `fact_order`: stores details of each order, including `order_id`, `user_id`, `eval_set`, `order_number`, `order_dow` (day of the week), `order_hour_of_day`, and `days_since_prior_order`.
+  - Partitioned by `user_id`: This allows for efficient query performance when filtering data for specific users, making user-centric analyses faster and more manageable.
+  - Clustered by `order_id`: Orders are sorted by order_id to facilitate chronological analysis of a user's orders, identifying the first and last orders easily.
+- `fact_order_product`: stores information linking orders to products, with fields such as `order_id`, `product_id`, `add_to_cart_order`, and `reordered`.
+  - Partitioned by `order_id`: Enables efficient filtering of data based on specific orders, essential for analyzing order-level product selections.
+  - Clustered by `add_to_cart_order`: Sorts products within an order by their addition sequence to the cart, allowing for a sequential view of how products were chosen.
 
 ## Analytics Engineering with DBT
 

@@ -2,7 +2,7 @@
 
 To get started with our Instacart Data Engineering Project, follow these setup instructions:
 
-1. **Environment Configuration:**
+1. **Set up Local Environment:**
 
    - Ensure Python 3.8+, Docker, and Docker Compose are installed on your system.
   
@@ -13,14 +13,14 @@ To get started with our Instacart Data Engineering Project, follow these setup i
 	- Create a service account with the following permission role: **Storage Admin** + **Storage Object Admin** + **BigQuery Admin**
 	- Download the `service-account-keys.json` file, rename it to `dezc-credentials.json` and store at in `~/.google/credentials/dezc-credentials.json`
 
-3. **Set up Environment Variable**
-
-	- copy the `.env.sample` to `.env`
-	- you can keep all the values the same
-
-4. **Repository Clone**
+3. **Clone Repository**
 
    - Clone the project repository from GitHub to your local machine.
+
+4. **Set up Environment Variable**
+
+	- change to `workflow` directory, copy the `.env.sample` to `.env`
+	- you can keep all the values the same
 
 5. **Provision Cloud Infrastructure**
 
@@ -59,12 +59,12 @@ https://www.kaggle.com/c/instacart-market-basket-analysis), download the dataset
     	- username: airflow
 		- password: airflow
 	- run the following DAGs with the following orders
-    	- Run the s1_ingest_to_gcs DAG
-    	- Run the s2_ingest_to_bigquery DAG
-		- Run the s3_dbt_build DAG
+    	- Run the `s1_ingest_to_gcs` DAG
+    	- Run the `s2_ingest_to_bigquery` DAG
+		- Run the `s3_dbt_build` DAG
 
 2. **Dashboard Setup**
 	- visit `http://localhost:3000/` to access Metabase
-	- connect it to BigQuery using the `dezc-credentials.json` to access and visualize the data
+	- connect it to BigQuery using the `dezc-credentials.json` file to access and visualize the data
 	
 
