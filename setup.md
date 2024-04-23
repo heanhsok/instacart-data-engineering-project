@@ -4,7 +4,7 @@ To get started with our Instacart Data Engineering Project, follow these setup i
 
 1. **Set up Local Environment:**
 
-   - Ensure Python 3.8+, Docker, and Docker Compose are installed on your system.
+   - Ensure Python 3.8+, Terraform, Docker, and Docker Compose are installed on your system.
   
 2. **Set up a Google Cloud Platform (GCP)** 
 
